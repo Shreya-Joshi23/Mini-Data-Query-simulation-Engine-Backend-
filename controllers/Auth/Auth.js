@@ -73,7 +73,7 @@ export async function signincontroller(req, res) {
 
   try {
     //verify email
-    const user = await prisma?.user.findFirst({
+    const user = await db?.user.findFirst({
       where: {
         email: parsedData.data.email,
       },
